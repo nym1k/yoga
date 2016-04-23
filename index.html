@@ -3,6 +3,8 @@
 <head>
 	<title>Yoga</title>
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/norm.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,21 +26,34 @@
 		</header>
 
 		<div class="cta">
-			<h2>07723 456789 - info@ahyoga.com</h2>
+			<h3>07723 456789</h3>
+			<h3>info@ahyoga.com</h3>
 			<a href="#">Book Now</a>
 		</div>
 		
 		<div class="lightbox">
-			<h1>Lightbox</h1>
-			<img src="http://placekitten.com/300/200" alt="placeholder">
+			<div class="owl-carousel">
+				<div>
+					<img src="img/flow.jpg" alt="flow">
+				</div>
+				<div>
+					<img src="img/antigrav.jpg" alt="antigrav">
+				</div>
+				<div>
+					<img src="img/groove.jpg" alt="groove">
+				</div>
+				<div>
+					<img src="img/hatha.jpg" alt="hatha">
+				</div>
+			</div>
 		</div>
 
-		<div id="about">
+		<div id="about" class="about">
 			<h1>About</h1>
 			<p>Quisque fermentum pharetra ligula, a porta sapien dapibus vel. Quisque sed malesuada enim. Fusce blandit gravida velit eget bibendum. Curabitur ullamcorper elit et tortor dictum venenatis non vel ligula. Proin sagittis pharetra pharetra. Nullam euismod lacus in congue ultricies. Quisque eu porttitor odio. Suspendisse sagittis nibh dui, non rhoncus tortor ultricies sit amet. Ut ut porttitor risus, ac pulvinar lacus. Proin congue eros odio, vitae sagittis dui finibus vitae. Donec ex diam, interdum nec malesuada sed, ultricies vel magna.</p>
 		</div>
 
-		<div id="testimonials">
+		<div id="testimonials" class="testimonials">
 			<h1>Testimonials</h1>
 
 			<h2>Lucy Labrador</h2>
@@ -51,7 +66,7 @@
 			<p>Praesent non ultricies turpis. Why do all these people speak Latin? Phasellus eget quam id justo facilisis consequat.</p>
 		</div>
 
-		<div id="faq">
+		<div id="faq" class="faq">
 			<h1>FAQ</h1>
 			<h2>How do I do a yoga?</h2>
 			<p>It's easy.</p>
@@ -61,7 +76,7 @@
 			<p>I don't know, ask one.</p>
 		</div>
 
-		<div id="contact">
+		<div id="contact" class="contact">
 			<h1>Contact</h1>
 		</div>
 
@@ -71,5 +86,30 @@
 	
 	</div>
 	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+  			$(".owl-carousel").owlCarousel({
+  				loop:true,
+    			margin:10,
+    			nav:false,
+    			responsive:{
+        			0:{
+            			items:1
+			        },
+			        1000:{
+			            items:2
+			        }
+			    },
+			    autoplay:true,
+				autoplayTimeout:4000,
+				autoplayHoverPause:true
+  			});
+		}); 
+	</script>
+
 </body>
 </html>  

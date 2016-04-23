@@ -9,6 +9,7 @@
 }
 
 body {
+	background: #fdfdfd;
   color: #797e83;
   font-size: 16px;
 	margin: 0;
@@ -30,8 +31,9 @@ a {
 }
 
 .container {
-	width: 90%;
+	width: 100%;
 	margin: auto;
+	background: #fff;
 }
 
 /* --------------------------
@@ -39,9 +41,17 @@ a {
 --------------------------- */
 
 .main-header,
-.nav {
+.nav,
+.cta,
+.lightbox,
+.about,
+.testimonials,
+.faq,
+.contact,
+footer {
 	display: flex;
 	flex-direction: column;
+	padding: 0 5%;
 }
 
 .main-header {
@@ -49,7 +59,7 @@ a {
 }
 
 .site-logo {
-	width: 300px;
+	width: 80%;
 	align-self: center;
 }
 
@@ -72,15 +82,50 @@ a {
 	border-bottom-color: #B191E0;
 }
 
+.cta,
+.about,
+.faq,
+footer {
+	text-align: center;
+	background: #3F3E3E;
+	color: #fff;
+}
+
+.testimonials,
+.contact {
+	text-align: center;
+}
+
+.cta {
+	padding-bottom: 30px;
+	margin: 30px 0;
+}
+
+.cta a {
+	padding: 10px 30px;
+	background-color: #B191E0;
+	color: #E5E6E4;
+	font-size: 1.5em;
+	width: 75%;
+	align-self: center;
+}
+
+.lightbox {
+	margin-bottom: 30px;
+}
+
+
+
 /* --------------------------
   Media Queries
 --------------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	
 	.main-header {
 		height: 200px;
 		justify-content: flex-end;
+		margin-bottom: 60px;
 	}
 
 	.site-logo {
@@ -96,6 +141,17 @@ a {
 	.nav a {
 		border-bottom-color: transparent;
 	}
+
+	.cta {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 30px;
+	}
+
+	.cta a {
+		width: 30%;
+	}
 }
 
 @media (min-width: 1025px) {
@@ -103,6 +159,7 @@ a {
 	.main-header {
 		flex-direction: row;
 		justify-content: space-between;
+		margin-bottom: 0;
 	}
 
 	.nav {
@@ -113,6 +170,10 @@ a {
 	.nav li {
 		margin-left: .65em;
 		margin-right: .65em;
+	}
+
+	.cta {
+		margin-top: 0;
 	}
 }
 
